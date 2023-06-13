@@ -78,7 +78,7 @@ h2 {
 
 
 input[type='email'] {
-    background-image: url("../imagens/email.svg");
+    background-image: url("../imagens/icone-email.svg");
     background-repeat: no-repeat;
     padding: 10px 80px;
     background-color: rgb(238, 237, 237);
@@ -91,7 +91,7 @@ input[type='email'] {
 }
 
 input[type='password'] {
-    background-image: url("../imagens/pass.svg");
+    background-image: url("../imagens/icone-senha.svg");
     background-repeat: no-repeat;
     padding: 10px 80px;
     background-color: rgb(238, 237, 237);
