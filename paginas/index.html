@@ -7,6 +7,18 @@
     <link rel="icon" type="image/x-icon" href="../imagens/pet-fav.png">
     <link rel="stylesheet" href="../stilo/index.css">
     <title>Tela de Login</title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .form {
+            flex: 1;
+            background-color: #ccc;
+            margin: 5px;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
     <section>
@@ -22,7 +34,7 @@
         </form>
 
 
-        <form id="cadastroForm">
+        <form id="cadastroForm" onsubmit="return validarFormulario()">
             <h1 id="cabecalho">Digite seu login <img src="../imagens/icons-da-pata-do-cão.png" alt="Coracao com pata">
             </h1>
             <h6>Preencha seus dados</h6>
@@ -40,5 +52,65 @@
 
     </section>
 
+    <script>
+        function joinForms() {
+            var form1 = document.getElementById('direciona');
+            var form2 = document.getElementById('cadastroForm');
+
+            form1.style.marginRight = '0';
+            form2.style.marginLeft = '0';
+        }
+
+        // Chamando a função para juntar os formulários
+        joinForms();
+
+        function validarFormulario() {
+            // Obter os valores dos campos de e-mail e senha
+            var email = document.getElementById("email").value;
+            var senha = document.getElementById("senha").value;
+
+            // Verificar se o campo de e-mail está vazio
+            if (email === "") {
+                alert("Por favor, digite um endereço de e-mail.");
+                return false;
+            }
+
+            // Verificar se o campo de e-mail possui um formato válido
+            if (!validarEmail(email)) {
+                alert("Por favor, digite um endereço de e-mail válido.");
+                return false;
+            }
+
+            // Verificar se o campo de senha está vazio
+            if (senha === "") {
+                alert("Por favor, digite uma senha.");
+                return false;
+            }
+
+            // Verificar se a senha atende aos critérios de segurança
+            if (!validarSenha(senha)) {
+                alert("A senha deve conter pelo menos 8 caracteres, incluindo pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especial.");
+                return false;
+            }
+
+            // Redirecionar para a página "cadastro_usuario.html"
+            window.location.href = "cadastro_usuario.html";
+
+            // Evitar que o formulário seja enviado normalmente
+            return false;
+        }
+
+        function validarEmail(email) {
+            // Regex para validar o formato do e-mail
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        function validarSenha(senha) {
+            // Regex para validar a senha (pelo menos 8 caracteres, incluindo pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especial)
+            var senhaRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+            return senhaRegex.test(senha);
+        }
+    </script>
 </body>
 </html>
