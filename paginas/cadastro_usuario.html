@@ -8,39 +8,56 @@
   <link rel="icon" type="image/x-icon" href="../imagens/pet-fav.png">
 </head>
 <body>
-  
-  
 
   <form id="cadastroForm">
-    <id="cabecalho">
+  <div id="cabecalho">
     <h1>Crie sua conta</h1>
     <p>Preencha seus dados</p>
+  </div>
 
-    <!-- Label do nome completo para se cadastrar -->
-    <label for="nomeCompleto"></label>
-    <input type="text" id="nomeCompleto" name="nomeCompleto"  class="digite" placeholder="Nome Completo" required><br><br>
-    
-    <!-- Label do email para se cadastrar. -->
-    <label for="email"></label>
-    <input type="email" id="email" name="email"  class="digite" placeholder="Email" required><br><br>
+  <input type="text" id="nomeCompleto" name="nomeCompleto" class="digite" placeholder="Nome Completo" required><br><br>
+ 
+  <input type="email" id="email" name="email" class="digite" placeholder="Email" required><br><br>
 
-    <label for="senha"></label> 
-      <input type="password" id="senha" class="form-input" name="senha"placeholder="Senha" required><br><br>
-    
-    <label for="confirmarSenha"></label>
-    <input type="password" id="confirmarSenha" class="form-input" name="confirmarSenha"placeholder="Confirmar senha" required><br><br>
+  <input type="password" id="senha" class="form-input" name="senha" placeholder="Senha" required><br><br>
 
+  <input type="password" id="confirmarSenha" class="form-input" name="confirmarSenha" placeholder="Confirmar senha" required><br><br>
 
-  </form>
+  <input type="submit" value="CADASTRAR">
+</form>
 
-    <!-- Frase para usuarios já cadastrado -->
-    <h1>Já possui sua conta?</h1>
+<script>
+  document.getElementById("cadastroForm").addEventListener("submit", function(event) {
+    event.preventDefault();
 
-    <!-- Frase mostrando o botão abaixo para entrar -->
-    <p>Acesse sua conta agora mesmo.</p>
+    var nomeCompleto = document.getElementById("nomeCompleto").value;
+    var email = document.getElementById("email").value;
+    var senha = document.getElementById("senha").value;
+    var confirmarSenha = document.getElementById("confirmarSenha").value;
 
-    <!-- Imput para entrar -->
-    <input type="submit" value="Entrar">
+    if (senha !== confirmarSenha) {
+      alert("A senha e a confirmação de senha não correspondem. Por favor, verifique.");
+      return;
+    }
+
+    // Aqui você pode adicionar a lógica para salvar os dados do cadastro
+    // Por exemplo, você pode fazer uma chamada AJAX para um serviço de backend ou executar uma operação no banco de dados
+
+    // Após salvar os dados, você pode redirecionar para outra página
+    window.location.href = "meu_perfil.html";
+  });
+</script>
+
+<div>
+
+  <h1>Já possui uma conta?</h1>
+
+  <p>Acesse sua conta agora mesmo.</p>
+
+  <!-- Entra caso usuario ja tenha conta -->
+  <input type="submit" value="ENTRAR"onclick="window.location.href='gerenciar_cadastro.html'" >
+
+</div>
 
 </body>
 </html>

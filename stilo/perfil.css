@@ -1,0 +1,87 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+@font-face {
+    font-family: fonte1;
+    src: url("../fontes/RubikMonoOne-Regular.ttf");
+}
+
+body {
+    background-color: #ab0bc5;
+}
+
+h1 {
+    font-family: fonte1;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    background-color: #1fd9b7;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    width: 60%;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 100px;
+    border-radius: 10px 10px 0px 0;
+}
+
+section {
+    background-color: white;
+    width: 60%;
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    border-radius: 0px 0px 10px 10px;
+}
+
+#texto {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #ab0bc5;
+    display: flex;
+}
+
+/* Estilos para os botões */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    justify-items: center;
+    margin-left: auto; 
+    padding: 50px;
+}
+
+input[type="button"] {
+    font-family: fonte1;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    color: white;
+    background-color: #ab0bc5;
+    border-radius: 10px;
+    padding: 28px;
+    width: 240px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+input[type="button"]:hover {
+    -webkit-filter: drop-shadow(15px 10px 5px rgba(0, 0, 0, .5));
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, .5));
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+/* Estilos para a tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    border: none;
+}

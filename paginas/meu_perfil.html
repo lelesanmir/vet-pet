@@ -1,34 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exemplo de exibição de dados cadastrais</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stilo/perfil.css">
+    <title>Meu perfil</title>
 </head>
+
 <body>
-  <h1>Dados Cadastrais</h1>
+    <h1>MEU PERFIL</h1>
+    <section>
+        <table>
+            <tr id="texto">
+                <th colspan="2">DADOS CADASTRAIS</th>
+            </tr>
+            <tr>
+                <td><strong>Nome:</strong></td>
+                <td id="nome"></td>
+            </tr>
+            <tr>
+                <td><strong>E-mail:</strong></td>
+                <td id="email"></td>
+            </tr>
+            <tr>
+                <td><strong>CPF:</strong></td>
+                <td id="cpf"></td>
+            </tr>
+            <tr>
+                <td><strong>Sexo:</strong></td>
+                <td id="sexo"></td>
+            </tr>
+            <tr>
+                <td><strong>Data de Nascimento:</strong></td>
+                <td id="dataNascimento"></td>
+            </tr>
+            <tr>
+                <td><strong>Cidade:</strong></td>
+                <td id="cidade"></td>
+            </tr>
+            <tr>
+                <td><strong>Endereço:</strong></td>
+                <td id="endereco"></td>
+                <td><strong>Complemento:</strong></td>
+                <td id="complemento"></td>
+            </tr>
+        </table>
+        <div class="button-container">
+            <input type="button" value="MEUS PETS" onclick="window.location.href='meus_pets.html'">
+            <input type="button" value="GERENCIAR CADASTRO" onclick="window.location.href='gerenciar_cadastro.html'">
+        </div>
+    </section>
 
-  
-    <p><strong>Nome:</strong> xxxx</p>
-    <p><strong>E-mail:</strong> xxxx</p>
-    <p><strong>CPF:</strong> xxxx</p>
-    <p><strong>Sexo:</strong> xxx</p>
-    <p><strong>Data de Nascimento:</strong> xxxx</p>
-    <p><strong>Cidade:</strong> xxxx</p>
-    <p><strong>Endereço:</strong> xxxx</p>
-  
+    <script>
+        // Função para buscar os dados do perfil no banco de dados
+        function buscarPerfil() {
+            // Aqui você pode adicionar a lógica para buscar os dados do perfil do banco de dados no backend
+            // Você precisará usar uma tecnologia de backend (por exemplo, PHP, Node.js, Python) para buscar os dados do perfil do banco de dados
 
-  <br>
+            // Exemplo em JavaScript simulando os dados do perfil recebidos do backend
+            var dadosPerfil = {
+                nome: "Nome do Usuário",
+                email: "email@example.com",
+                cpf: "123456789",
+                sexo: "Masculino",
+                dataNascimento: "01/01/1990",
+                cidade: "Cidade do Usuário",
+                endereco: "Endereço do Usuário",
+                complemento: "Complemento"
+            };
 
-  <a href="meus_pets.html">MEUS PETS</a><br><br>
-  <a href="gerenciar_cadastro.html">GERENCIAR CADASTRO</a>
+            // Preenche os campos do HTML com os dados do perfil
+            document.getElementById("nome").textContent = dadosPerfil.nome;
+            document.getElementById("email").textContent = dadosPerfil.email;
+            document.getElementById("cpf").textContent = dadosPerfil.cpf;
+            document.getElementById("sexo").textContent = dadosPerfil.sexo;
+            document.getElementById("dataNascimento").textContent = dadosPerfil.dataNascimento;
+            document.getElementById("cidade").textContent = dadosPerfil.cidade;
+            document.getElementById("endereco").textContent = dadosPerfil.endereco;
+            document.getElementById("complemento").textContent = dadosPerfil.complemento;
+        }
 
+        // Chama a função buscarPerfil() ao carregar a página
+        window.onload = buscarPerfil;
+    </script>
 </body>
+
 </html>
-
-
-  
-  
-
-  

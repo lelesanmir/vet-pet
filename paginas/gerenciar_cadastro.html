@@ -1,57 +1,95 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../stilo/gerenciar_cadastro.css">
-    <title>Gerenciar Cadastro</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Cadastro</title>
+  <link rel="icon" type="image/x-icon" href="../imagens/pet-fav.png">
 </head>
-
-<head>
-</head>
-
 <body>
-    <h1>MEU PERFIL</h1>
-    <section>
-        <table>
-            <tr id="texto">
-                <th colspan="2">DADOS CADASTRAIS</th>
-            </tr>
-            <tr>
-                <td><strong>Nome:</strong></td>
-                <td>xxxx</td>
-            </tr>
-            <tr>
-                <td><strong>E-mail:</strong></td>
-                <td>xxxx</td>
-            </tr>
-            <tr>
-                <td><strong>CPF:</strong></td>
-                <td>xxxx</td>
-            </tr>
-            <tr>
-                <td><strong>Sexo:</strong></td>
-                <td>xxx</td>
-            </tr>
-            <tr>
-                <td><strong>Data de Nascimento:</strong></td>
-                <td>xxxx</td>
-            </tr>
-            <tr>
-                <td><strong>Cidade:</strong></td>
-                <td>xxxx</td>
-            </tr>
-            <tr>
-                <td><strong>Endereço:</strong></td>
-                <td>xxxx <strong>Complemento:</strong> xxxxx</td>
-            </tr>
-        </table>
-        <div class="button-container">
-            <input type="button" value="MEUS PETS" onclick="window.location.href='meus_pets.html'">
-            <input type="button" value="GERENCIAR CADASTRO" onclick="window.location.href='gerenciar_cadastro.html'">
-        </div>
-    </section>
-</body>
+  
+  
 
+  <form id="cadastroForm">
+    <id="cabecalho">
+    <h1>GERENCIAR CADASTRO</h1><br>
+    <p>Complete seu cadastro</p>
+
+    <!-- Label FAQS -->
+    <a href=".html">
+        <button>FAQs</button>
+    </a><br><br>
+
+    <!-- Button Contate nos -->
+    <a href=".html">
+        <button>CONTATE NOS</button>
+      </a><br><br>
+
+    <!-- Button suporte -->
+    <a href=".html">
+        <button>SUPORTE</button>
+      </a><br><br>
+
+      <form id="deleteForm" action="caminho_para_deletar.php" method="POST">
+        <input type="hidden" name="id" value="ID_DO_CADASTRO">
+        <input type="submit" value="Deletar">
+      </form>
+      
+      <script>
+        document.getElementById("deleteForm").addEventListener("submit", function(event) {
+          event.preventDefault();
+          
+          // Obter o ID do cadastro a ser excluído
+          var idCadastro = document.getElementsByName("id")[0].value;
+          
+          // Aqui você pode adicionar a lógica para excluir o registro do cadastro usando o ID
+          // Por exemplo, você pode fazer uma chamada AJAX para um serviço de backend ou executar uma operação no banco de dados
+          //Tem que ter o backend feito e contato com o banco para deletar.
+
+          // depois de apagado volta para index.html
+          window.location.href = "index.html";
+        });
+      </script><br><br>
+      
+      
+      
+      
+
+    <input type="submit" value="REGISTRE-SE" onclick="window.location.href='cadastro_usuario.html'"><br><br>
+
+    <input type="submit" value="EDITAR DADOS"><br><br>
+
+    <input type="submit" value="SAIR DO PERFIL" onclick="window.location.href='index.html'"><br><br>
+
+    <!-- Label do CPF -->
+    <label for="CPF"></label>
+    <input type="text" id="cpf" name="CPF"  class="digite" placeholder="CPF" required><br><br>
+    
+    <!-- Label data nascimento. -->
+    <label for="data nascimento"></label>
+    <input type="text" id="date" name="data"  class="digite" placeholder="DATA DE NASCIMENTO" required><br><br>
+
+    <!-- Label sexo. -->
+    <label for="sexo"></label>
+    <input type="text" id="SEXO" name="sexo"  class="digite" placeholder="SEXO" required><br><br>
+    
+    <!-- Label Cidade. -->
+    <label for="Cidade"></label>
+    <input type="cidade" id="cidade" name="cidade"  class="digite" placeholder="CIDADE" required><br><br>
+
+    <!-- Label ENDEREÇO. -->
+    <label for="endereço"></label>
+    <input type="text" id="endereco" name="endereco"  class="endereco" placeholder="ENDEREÇO" required><br><br>
+
+    <!-- Label Complemento. -->
+    <label for="Complemento"></label>
+    <input type="text" id="cidade" name="Complemento"  class="digite" placeholder="COMPLEMENTO" required><br><br>
+
+    <!-- Botão salvar-->
+    <input type="submit" value="SALVAR">
+
+  </form>
+
+</body>
 </html>
