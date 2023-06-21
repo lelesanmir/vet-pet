@@ -20,68 +20,102 @@ h1 {
     display: flex;
     justify-content: center;
     justify-items: center;
-    width: 60%;
-    padding: 20px;
+    width: 80%;
+    padding: 11px;
     margin: 0 auto;
-    margin-top: 100px;
-    border-radius: 10px 10px 0px 0;
+    margin-top: 50px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+
+section {
+    display: flex;
+    justify-content: center;
+    margin-top: -18px;
 }
 
 section {
-    background-color: white;
-    width: 60%;
-    padding: 20px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    border-radius: 0px 0px 10px 10px;
-}
+    position: relative;
+  }
+  
+  section::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 80%;
+    background-color: black;
+  }
 
-#texto {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #ab0bc5;
-    display: flex;
-}
 
-/* Estilos para os botões */
-.button-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    justify-items: center;
-    margin-left: auto; 
-    padding: 50px;
-}
-
-input[type="button"] {
-    font-family: fonte1;
-    text-shadow: black 0.1em 0.1em 0.2em;
-    color: white;
-    background-color: #ab0bc5;
+button {
+    padding: 10px 10px;
+    width: 200px;
+    background-color: rgb(238, 237, 237);
+    border: line;
     border-radius: 10px;
-    padding: 28px;
-    width: 240px;
-    border: none;
-    margin-bottom: 10px;
-}
-
-input[type="button"]:hover {
-    -webkit-filter: drop-shadow(15px 10px 5px rgba(0, 0, 0, .5));
-    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, .5));
-    transition: all 0.5s;
+    text-align: left;
+    margin: 10px 0%;
     cursor: pointer;
 }
 
-/* Estilos para a tabela */
-table {
-    width: 100%;
-    border-collapse: collapse;
+
+#btn {
+    width: 18%;
+    padding: 130px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 0px 0px 10px;
+}
+
+
+p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #ab0bc5;
+}
+
+input {
+    width: 200px;
+    padding: 10px 10px;
+    background-color: rgb(238, 237, 237);
+    border: line;
+    border-radius: 10px;
+    text-align: left;
+    margin: 10px 0%;
+    cursor: pointer;
+}
+
+
+#cadastroForm {
+    width: 25%;
+    padding: 131px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+    border-radius: 0px 0px 10px 0px;
+}
+
+#salvar [type='submit'] {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    width: 100px;
+    background-color: #ab0bc5;
+    color: white;
     border: none;
 }
 
-th, td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-    border: none;
+#salvar [type='submit']:hover {
+    -webkit-filter: drop-shadow(15px 10px 5px rgba(0, 0, 0, .5));
+    filter: drop-shadow(15px 10px 5px rgba(0, 0, 0, .5));
+    transition: all 0.5s;
+    cursor: pointer;
 }
