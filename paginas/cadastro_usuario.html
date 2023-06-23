@@ -1,63 +1,68 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro do Usuario</title>
+  <link rel="stylesheet" href="../stilo/cadastro.css">
   <link rel="icon" type="image/x-icon" href="../imagens/pet-fav.png">
 </head>
+
 <body>
+  <section>
 
-  <form id="cadastroForm">
-  <div id="cabecalho">
-    <h1>Crie sua conta</h1>
-    <p>Preencha seus dados</p>
-  </div>
+    <div id="menu2">
 
-  <input type="text" id="nomeCompleto" name="nomeCompleto" class="digite" placeholder="Nome Completo" required><br><br>
- 
-  <input type="email" id="email" name="email" class="digite" placeholder="Email" required><br><br>
+      <h1>Já possui uma conta?</h1>
 
-  <input type="password" id="senha" class="form-input" name="senha" placeholder="Senha" required><br><br>
+      <p>Acesse sua conta agora mesmo.</p>
 
-  <input type="password" id="confirmarSenha" class="form-input" name="confirmarSenha" placeholder="Confirmar senha" required><br><br>
+      <!-- Entra caso usuario ja tenha conta -->
+      <input type="submit" value="ENTRAR" onclick="window.location.href='gerenciar_cadastro.html'">
 
-  <input type="submit" value="CADASTRAR">
-</form>
+    </div>
+    <form id="cadastroForm">
+      <div id="cabecalho">
+        <h1>Crie sua conta</h1>
+      </div>
 
-<script>
-  document.getElementById("cadastroForm").addEventListener("submit", function(event) {
-    event.preventDefault();
+      <input type="text" id="nomeCompleto" name="nomeCompleto" class="digite" placeholder="Nome Completo" required>
 
-    var nomeCompleto = document.getElementById("nomeCompleto").value;
-    var email = document.getElementById("email").value;
-    var senha = document.getElementById("senha").value;
-    var confirmarSenha = document.getElementById("confirmarSenha").value;
+      <input type="email" id="email" name="email" class="digite" placeholder="Email" required>
 
-    if (senha !== confirmarSenha) {
-      alert("A senha e a confirmação de senha não correspondem. Por favor, verifique.");
-      return;
-    }
+      <input type="password" id="senha" class="form-input" name="senha" placeholder="Senha" required>
 
-    // Aqui você pode adicionar a lógica para salvar os dados do cadastro
-    // Por exemplo, você pode fazer uma chamada AJAX para um serviço de backend ou executar uma operação no banco de dados
+      <input type="password" id="confirmarSenha" class="form-input" name="confirmarSenha" placeholder="Confirmar senha"
+        required>
 
-    // Após salvar os dados, você pode redirecionar para outra página
-    window.location.href = "meu_perfil.html";
-  });
-</script>
+      <input type="submit" value="CADASTRAR">
+    </form>
 
-<div>
+  </section>
 
-  <h1>Já possui uma conta?</h1>
+  <script>
+    document.getElementById("cadastroForm").addEventListener("submit", function (event) {
+      event.preventDefault();
 
-  <p>Acesse sua conta agora mesmo.</p>
+      var nomeCompleto = document.getElementById("nomeCompleto").value;
+      var email = document.getElementById("email").value;
+      var senha = document.getElementById("senha").value;
+      var confirmarSenha = document.getElementById("confirmarSenha").value;
 
-  <!-- Entra caso usuario ja tenha conta -->
-  <input type="submit" value="ENTRAR"onclick="window.location.href='gerenciar_cadastro.html'" >
+      if (senha !== confirmarSenha) {
+        alert("A senha e a confirmação de senha não correspondem. Por favor, verifique.");
+        return;
+      }
 
-</div>
+      // Aqui você pode adicionar a lógica para salvar os dados do cadastro
+      // Por exemplo, você pode fazer uma chamada AJAX para um serviço de backend ou executar uma operação no banco de dados
 
+      // Após salvar os dados, você pode redirecionar para outra página
+      window.location.href = "meu_perfil.html";
+    });
+  </script>
 </body>
+
 </html>

@@ -1,0 +1,135 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+@font-face {
+    font-family: fonte1;
+    src: url("../fontes/RubikMonoOne-Regular.ttf");
+}
+
+body {
+    background-color: #ab0bc5;
+}
+
+#cabecalho {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #1fd9b7;
+    display: flex;
+    justify-content: center;
+    margin: 0% auto;
+}
+
+section {
+    display: flex;
+    justify-content: center; /* Alinha as divs horizontalmente */
+    align-items: center; /* Alinha as divs verticalmente */
+    height: 100vh; /* Define a altura total da seção como altura da janela */
+}
+
+#cadastroForm {
+    background-color: white;
+    height: 395px;
+    width: 40%;
+    margin: 0% 1%; /* Margem entre as divs */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0px 10px 10px 0px;
+}
+
+#menu2 {
+    padding: 9%;
+    background-color: #1fd9b7;
+    width: 10%;
+    margin: 0% -1%; /* Margem entre as divs */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px 0px 0px 10px;
+    
+}
+
+
+
+input[type='TEXT'] {
+    background-image: url("../imagens/icone-usuario.svg");
+    background-repeat: no-repeat;
+    padding: 10px 80px;
+    background-color: rgb(238, 237, 237);
+    border: none;
+    box-shadow: 0Px 10Px 8px rgb(196, 193, 193);
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px 0%;
+    cursor: pointer;
+}
+
+
+input[type='email'] {
+    background-image: url("../imagens/icone-email.svg");
+    background-repeat: no-repeat;
+    padding: 10px 80px;
+    background-color: rgb(238, 237, 237);
+    border: none;
+    box-shadow: 0Px 10Px 8px rgb(196, 193, 193);
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px 0%;
+    cursor: pointer;
+}
+
+input[type='password'] {
+    background-image: url("../imagens/icone-senha.svg");
+    background-repeat: no-repeat;
+    padding: 10px 80px;
+    background-color: rgb(238, 237, 237);
+    border: none;
+    box-shadow: 0Px 10Px 8px rgb(196, 193, 193);
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px 0%;
+    cursor: pointer;
+}
+
+input[value='CADASTRAR'] {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #1fd9b7;
+    color: white;
+    display: flex;
+    justify-content: center;
+    border-color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 10px 30px;
+    margin: 5px;
+
+}
+
+input[value='CADASTRAR']:hover {
+    -webkit-filter: drop-shadow(15px 10px 5px rgba(0, 0, 0, .5));
+    filter: drop-shadow(15px 10px 5px rgba(0, 0, 0, .5));
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+
+input[value='ENTRAR'] {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #1fd9b7;
+    color: white;
+    border-color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 10px;
+    padding: 10px 20px
+}
+
+input[value='ENTRAR']:hover {
+    -webkit-filter: drop-shadow(15px 10px 5px rgba(0, 0, 0, .5));
+    filter: drop-shadow(15px 10px 5px rgba(0, 0, 0, .5));
+    transition: all 0.5s;
+    cursor: pointer;
+}
